@@ -1,15 +1,3 @@
-/* Estimado Profesor Mauricio:
-  Claramente solicito una revisión de nota, me faltan varias cosas del proyecto y de lo  que alcanzo a notar es lo siguiente:
-  Del Navbar, no está codificado el mediaquery; del jumbotron, no te lleva a ningún lado para ingresar correo; del slideswhow no se enteiende la idea
-  y por último de los productos y footer, se puede mejorar, en diseño por ejemplo. 
-  Ah! y no supe cómo hacer los commits correctamente.  Y no sé por qué no se cargan las img.. de dice "there is no changes to commit" o le soy push y me dice 
-  everything is up to date" .. 
-  Así que, hartas dudas y errores. Igual te ruego un feedback que si logro lo que me pides, pueda sacar todos los puntos completos del ejercicio.  
-
-    Atte,
-    Diego Letelier */
-
-
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -24,6 +12,7 @@
 .customheader {
     background-color: #3b44b6;
     min-height: 55px;
+    display: block;
     
     
 }
@@ -31,21 +20,21 @@
 .logo img {
     max-width: 100px;
     margin-left: 2%;
+    display: block;
     position: fixed;
-    z-index: 100;
+    z-index: 200;
+    
 }
 
-.navigation__responsive__ul {
-    display: none;
-}
 
-.navigation__responsive-li {
+.navigation__responsive {
     display: none;
 }
 
 .navigation {
     background-color: #3b44b6;
     margin-top: 0px;
+    
     
     
 }
@@ -73,17 +62,117 @@
     color: rgb(234, 255, 4);
 }
 
+.navigation__responsive-ul {
+    display: none;
+}
+
+/* responsive menu */
+
+@media only screen and (max-width: 500px) {
+    
+   
+
+    .navigation {
+        display: none;
+    }
+
+    
+    .navigation__responsive {
+        display: inline-block;
+        position: fixed;
+        margin-inline-start: 0;
+        background-color: #3b44b6;
+                       
+   }
+
+   .navigation__responsive-li {
+    display: block;
+    text-align: end;
+    
+    margin-top: 90px;
+    font-size: large;
+
+   }
+
+   .navigation__responsive-button {
+    display: block;
+    position: fixed;
+    margin-left: 70%;
+    z-index: 100;
+    color: #75dae0;
+    text-align: right;  
+    margin-top: 20px;
+    z-index: 200;
+          
+}    
+
+    .navigation__responsive-button:hover {
+        color:rgb(234, 255, 4)
+        
+    }
+
+
+      
+    
+
+    .navigation__responsive-li > a {
+        text-decoration: none;
+        color: #75dae0
+          
+    }
+
+    
+    .responsive__button-container {
+        display: inline-block;
+    }
+
+    .navigation__responsive-li:hover > a {
+        color: rgb(234, 255, 4);
+    }
+    
+    
+    .customheader:hover > .navigation__responsive {
+        display: block;
+        position: fixed;
+        width: 60%;
+        height: 100%;
+        margin-right: 25%;
+        background-color: #3b44b6;
+        text-align: end;
+        z-index: 100;
+    }
+
+    .customheader:hover .navigation__responsive-ul {
+        display: block;
+    }
+        
+    
+   .customjumbo .amarillotitle { 
+
+        margin: 0px;
+        font-size : 65px;
+        color: #fedf2d;
+      
+    }
+    
+
+    }
+    
+
+
 /* jumbotron */
 
 .customjumbo {
     background-color: #75dae0;
-    margin: 0;
-    padding-bottom: 20px;
+    margin: 0px;
+    
     
 }
-.customjumbo .amarillotitle {
+ .amarillotitle {
+    margin: 0px;
     font-size: 100px;
     color: #fedf2d;
+  
 }
 
 .amarillotitle:hover {    
@@ -93,14 +182,6 @@
 
 } 
 
-
-/* responsive menu */
-
-@media only screen and (max-width: 500px) {
-    .navigation__ul {
-        display: none;
-    }
-}    
 
 
 
@@ -131,55 +212,10 @@
 }
 
 .carditems {
-    text-align: center;
-}
-
-/* game */ 
-
-
-
-.game{
-
-    width: 500px;
-    height: 200px;
-    border: 1px solid black;
     margin: auto;
 }
-#character{
-    width: 20px;
-    height: 50px;
-    background-color: red;
-    position:relative;
-    top: 150px;
-}
-.animate{
-    animation: jump 0.3s linear;
-}
 
 
-@keyframes jump{
-    0%{top: 150px;}
-    30%{top: 100px;}
-    70%{top: 100px;}
-    100%{top: 150px;}
-}
-
-#block{
-    background-color: blue;
-    width: 20px;
-    height: 20px;
-    position: relative;
-    top: 130px;
-    left: 500px;
-    animation: block 1s infinite linear;
-}
-@keyframes block{
-    0%{left: 500px}
-    100%{left: -20px}
-}
-p{
-    text-align: center;
-}
 
 /* footer */
 
