@@ -165,7 +165,7 @@
 .customjumbo {
     background-color: #75dae0;
     margin: 0px;
-    
+    min-height: 380px;
     
 }
  .amarillotitle {
@@ -187,16 +187,26 @@
 
 /* carousel */
 
+.customcarousel {
+
+    margin-top: -25px;
+}
 
 .customimage {
+    
     
     max-width: 100%;
     max-height: 700px;
     align-items: center;
-    
-}
+    }
 
 /* products */
+
+.cardscontainer {
+
+    min-height: 600px;
+    margin-bottom: -20px;
+}
 
 .products {
     
@@ -207,6 +217,7 @@
 
 .customcardimg {
     min-height: 240px;
+    max-height: 240px;
     
    
 }
