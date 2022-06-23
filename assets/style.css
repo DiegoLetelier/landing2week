@@ -230,3 +230,14 @@
 
 /* footer */
 
+.customicons:hover {
+    fill: #fedf2d
+}
+
+.footerlinks > a {
+    text-decoration: none;
+}
+
+.footerlinks:hover {
+    color: #fedf2d !important;
+}
