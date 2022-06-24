@@ -76,7 +76,13 @@
         display: none;
     }
 
-    
+    .customheader {
+        display: block;
+        position: sticky;
+        top: 0;
+        z-index: 600;
+    }
+
     .navigation__responsive {
         display: inline-block;
         position: fixed;
@@ -88,8 +94,8 @@
    .navigation__responsive-li {
     display: block;
     text-align: end;
-    
     margin-top: 90px;
+    margin-right: 5%;
     font-size: large;
 
    }
@@ -134,16 +140,18 @@
     .customheader:hover > .navigation__responsive {
         display: block;
         position: fixed;
-        width: 60%;
+        width: 75%;
         height: 100%;
         margin-right: 25%;
         background-color: #3b44b6;
         text-align: end;
         z-index: 100;
+      
     }
 
     .customheader:hover .navigation__responsive-ul {
         display: block;
+       
     }
         
     
@@ -155,6 +163,9 @@
       
     }
     
+    .customcarousel .carouseltext {
+        font-size: smaller;
+    }
 
     }
     
@@ -171,6 +182,7 @@
  .amarillotitle {
     margin: 0px;
     font-size: 100px;
+    text-shadow: 1px 1px 1px #ffffff;
     color: #fedf2d;
   
 }
@@ -192,6 +204,14 @@
     margin-top: -25px;
 }
 
+.carouseltext {
+    margin-left: 10%;
+    margin-top: 20px;
+    position: absolute;
+    z-index: 200;
+    font-size: large;
+    text-shadow: 2px 2px 4px #ffffff;
+}
 .customimage {
     
     
@@ -199,6 +219,7 @@
     max-height: 700px;
     align-items: center;
     }
+
 
 /* products */
 
@@ -213,6 +234,7 @@
     padding: 50px;
     font-size: 50px;
     text-align: center;
+    
 }
 
 .customcardimg {
@@ -238,6 +260,9 @@
     text-decoration: none;
 }
 
-.footerlinks:hover {
-    color: #fedf2d !important;
+/* I had to use important here, didn´t work adding more classes on scale */
+
+.customfooter .customfooter__li:hover > a {
+
+    color: #fedf2d !important ;
 }
